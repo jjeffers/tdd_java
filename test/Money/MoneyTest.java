@@ -16,7 +16,7 @@ public class MoneyTest extends TestCase {
 		assertFalse(Money.dollar(5).equals(new Dollar(6)));
 		assertTrue(new Franc(5).equals(new Franc(5)));
 		assertFalse(new Franc(5).equals(new Franc(6)));
-		assertFalse(new Franc(5).equals(new Dollar(5)));
+		assertFalse(new Franc(5).equals(Money.dollar(5)));
 	}
 
 	public void testFrancMultiplication() {

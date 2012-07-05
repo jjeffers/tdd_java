@@ -1,7 +1,6 @@
 package Money;
 
 public class Dollar extends Money {
-	int amount;
 
 	public Dollar(int amount) {
 		this.amount = amount;

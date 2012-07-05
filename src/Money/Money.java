@@ -1,6 +1,6 @@
 package Money;
 
-public class Money {
+abstract class Money {
 	protected int amount;
 
 	public boolean equals(Object object) {
@@ -11,4 +11,6 @@ public class Money {
 	static Dollar dollar(int amount) {
 		return new Dollar(amount);
 	}
+	
+	abstract Money times(int multiplier);
 }

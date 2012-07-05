@@ -1,6 +1,6 @@
 package Money;
 
-public class Dollar {
+public class Dollar extends Money {
 	int amount;
 
 	public Dollar(int amount) {

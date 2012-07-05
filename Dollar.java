@@ -4,4 +4,9 @@ public class Dollar
     {
         
     }
+    
+    public void times(int multiplier)
+    {
+        
+    }
 }

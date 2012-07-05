@@ -1,7 +1,6 @@
 public class Money
 {
 
-
     public void testMultiplication() 
     {
         Dollar five= new Dollar(5);

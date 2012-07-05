@@ -37,4 +37,8 @@ public class Money implements Expression {
 	public Money reduce(String to) {
 		return this;
 	}
+
+	Money reduce(Expression source, String to) {
+		return source.reduce(to);
+	}
 }

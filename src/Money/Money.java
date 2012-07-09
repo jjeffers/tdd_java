@@ -22,7 +22,7 @@ public class Money implements Expression {
 		return new Money(amount, "CHF");
 	}
 
-	public Money times(int multiplier) {
+	public Expression times(int multiplier) {
 		return new Money(amount * multiplier, currency);
 	}
 
@@ -30,7 +30,7 @@ public class Money implements Expression {
 		return currency;
 	}
 
-	Expression plus(Money addend) {
+	Expression plus(Expression addend) {
 		return new Sum(this, addend);
 	}
 
@@ -42,8 +42,6 @@ public class Money implements Expression {
 	Money reduce(Expression source, String to) {
 		return source.reduce(to);
 	}
-
-
 
 	public Money reduce(Bank bank, String to) {
 		int rate = bank.rate(currency, to);

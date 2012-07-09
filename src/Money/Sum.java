@@ -1,16 +1,17 @@
 package Money;
 
 public class Sum implements Expression {
-	Money augend;
-	Money addend;
+	Expression augend;
+	Expression addend;
 
-	Sum(Money augend, Money addend) {
+	Sum(Expression augend, Expression addend) {
 		this.augend = augend;
 		this.addend = addend;
 	}
 
 	public Money reduce(String to) {
-		int amount = augend.amount + addend.amount;
+		int amount = augend.reduce(to).amount + 
+				addend.reduce(to).amount;
 		return new Money(amount, to);
 	}
 
